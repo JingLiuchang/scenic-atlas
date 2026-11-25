@@ -1,0 +1,98 @@
+[
+  {
+    "key": "jiuzhaigou",
+    "name": "九寨沟景区游客中心（大门）",
+    "lng": 103.918366,
+    "lat": 33.267052,
+    "crs": "GCJ-02",
+    "source": "https://www.amap.com/place/B0LUDUCNB5"
+  },
+  {
+    "key": "huangshan",
+    "name": "新国线黄山风景区游客集散中心（汤口）",
+    "lng": 118.17645,
+    "lat": 30.066134,
+    "crs": "GCJ-02",
+    "source": "https://ditu.amap.com/place/B022F002XB"
+  },
+  {
+    "key": "gugong",
+    "name": "故宫博物院午门",
+    "lng": 116.397228,
+    "lat": 39.913582,
+    "crs": "GCJ-02",
+    "source": "https://www.amap.com/place/B000A84GDN"
+  },
+  {
+    "key": "xihu",
+    "name": "西湖游船一公园码头",
+    "lng": 120.161119,
+    "lat": 30.250145,
+    "crs": "GCJ-02",
+    "source": "https://www.amap.com/place/B0L1YSDHPW"
+  },
+  {
+    "key": "wulingyuan",
+    "name": "武陵源风景名胜区东门（标志门）",
+    "lng": 110.535819,
+    "lat": 29.351196,
+    "crs": "GCJ-02",
+    "source": "https://www.amap.com/place/B02E801455"
+  },
+  {
+    "key": "lijiver",
+    "name": "漓江三星游船磨盘山客运港",
+    "lng": 110.432884,
+    "lat": 25.146957,
+    "crs": "GCJ-02",
+    "source": "https://www.amap.com/place/B0FFJC9B7U"
+  },
+  {
+    "key": "badaling",
+    "name": "八达岭长城瓮城登长城入口",
+    "lng": 116.017807,
+    "lat": 40.35398,
+    "crs": "GCJ-02",
+    "source": "https://www.amap.com/place/B0FFFDMDWL"
+  },
+  {
+    "key": "terracotta",
+    "name": "秦始皇兵马俑博物馆游客服务中心",
+    "lng": 109.282558,
+    "lat": 34.388784,
+    "crs": "GCJ-02",
+    "source": "https://www.amap.com/place/B0FFKLMRSY"
+  },
+  {
+    "key": "yuyuan",
+    "name": "上海豫园北门",
+    "lng": 121.492502,
+    "lat": 31.227761,
+    "crs": "GCJ-02",
+    "source": "https://www.amap.com/place/B0H6K5BJMJ"
+  },
+  {
+    "key": "wuhou",
+    "name": "成都武侯祠博物馆文物区大门",
+    "lng": 104.04932,
+    "lat": 30.644529,
+    "crs": "GCJ-02",
+    "source": "https://ditu.amap.com/place/B001C7YDCP"
+  },
+  {
+    "key": "potala",
+    "name": "布达拉宫白塔地面停车场",
+    "lng": 91.114742,
+    "lat": 29.652952,
+    "crs": "GCJ-02",
+    "source": "https://www.amap.com/place/B0FFFY4GXQ"
+  },
+  {
+    "key": "lijiang",
+    "name": "丽江古城大水车",
+    "lng": 100.233324,
+    "lat": 26.876027,
+    "crs": "GCJ-02",
+    "source": "https://ditu.amap.com/place/B0FFF9GOOV"
+  }
+]

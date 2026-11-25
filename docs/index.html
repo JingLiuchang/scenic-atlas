@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#163f36">
+<title>山河图志 · 5A &amp; 4A 级景区全国地图</title>
+<meta name="description" content="在山河图志探索全国 5A、4A 级景区，浏览山水与人文，规划交通并记录足迹。">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#map" aria-label="山河图志 首页"><span class="brandmark"><svg viewBox="0 0 46 46" aria-hidden="true"><circle fill="#f0c96b" cx="31.3" cy="12.1" r="3.4"/><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round" stroke-linecap="round"><path d="m5 28 11-16 8 12 5-7 12 14"/><path d="m9 31 8-11 8 12 5-7 7 8M7 35c7-3 11-2 16 0s10 2 16-1"/></g></svg></span><span class="brandtext"><strong>山河图志</strong><small>SHANHE ATLAS</small></span></a>
+  <nav class="mainnav" aria-label="主导航"><button class="navitem active" data-view="explore"><i data-ic="compass"></i>地图探索</button><button class="navitem" data-view="foot"><i data-ic="foot"></i>我的足迹</button></nav>
+  <button class="home-button" id="home-open"><i data-ic="house"></i><span id="home-label">设置定居点</span><i data-ic="chev-down"></i></button>
+</header>
+<main id="workspace">
+  <aside id="sidebar" aria-label="景区筛选与列表">
+    <div class="sidehead"><div class="side-kicker"><span class="rule"></span>景区索引</div><div class="side-title"><h1>探索景区</h1><button class="iconbutton mobile-only" id="side-close" aria-label="关闭列表"><i data-ic="close"></i></button></div><p>全国 5A &amp; 4A 级旅游景区地图</p></div>
+    <div class="search-wrap"><i data-ic="search"></i><input id="search" type="search" placeholder="搜索景区、城市或省份" aria-label="搜索景区、城市或省份"><kbd>/</kbd></div>
+    <div class="filters">
+      <div class="filter-heading"><span><i data-ic="sliders"></i>筛选条件</span><button class="textbtn" id="reset"><i data-ic="reset"></i>重置</button></div>
+      <fieldset><legend>景区级别</legend><div class="chips" data-filter="level"><button data-val="">全部</button><button data-val="5"><b class="dot five"></b>5A 级</button><button data-val="4"><b class="dot four"></b>4A 级</button></div></fieldset>
+      <fieldset><legend>景观类型</legend><div class="chips" data-filter="type"><button data-val="">全部</button><button data-val="自然">自然</button><button data-val="人文">人文</button></div></fieldset>
+      <fieldset><legend>到访状态</legend><div class="chips" data-filter="status"><button data-val="">全部</button><button data-val="visited">去过</button><button data-val="unvisited">没去过</button><button data-val="want">想去</button></div></fieldset>
+    </div>
+    <section class="listbox"><div class="listtitle"><h2>景区列表</h2><span id="result-count" aria-live="polite">载入中</span></div><div class="result-scroll" id="result-list" aria-label="筛选结果"></div></section>
+    <footer class="sidefooter"><span><i data-ic="layers"></i> 山河图志</span><button id="about">数据与图源 <i data-ic="info"></i></button></footer>
+  </aside>
+  <section class="map-area" aria-label="交互式全国景区地图">
+    <div id="map-stage"><canvas id="map" aria-label="景区分布图。可拖动、缩放，也可使用区域选择器和景区列表。" tabindex="0"></canvas><div id="map-tip" hidden></div></div>
+    <div class="mapbar"><button class="floatbtn mobile-only" id="side-open"><i data-ic="sliders"></i>筛选</button><button class="floatbtn" id="region-button" aria-expanded="false"><i data-ic="globe"></i><span id="region-label">全国视图</span><i data-ic="chev-down"></i></button><button class="floatbtn back-region" id="region-up" hidden title="返回上一级"><i data-ic="back"></i></button></div>
+    <section id="region-pop" class="popover" hidden aria-label="选择地图区域"><div class="pop-title">浏览区域<button class="iconbutton" data-close="region-pop" aria-label="关闭"><i data-ic="close"></i></button></div><label>省级行政区<select id="province"></select></label><label>城市或自治州<select id="city"></select></label><button class="linkbtn" id="region-all"><i data-ic="globe"></i>返回全国视图</button></section>
+    <aside id="detail" aria-label="景区详情" hidden></aside>
+    <div class="map-tools"><div class="compass-rose" aria-hidden="true"><span>N</span><svg viewBox="0 0 28 34"><path d="M14 1 22 30 14 23Z" fill="#315448"/><path d="M14 1 6 30 14 23Z" fill="#fdfcf0" stroke="#315448" stroke-width="1.2"/></svg></div><div class="zoom-controls"><button id="zoom-in" aria-label="放大地图"><i data-ic="plus"></i></button><button id="zoom-out" aria-label="缩小地图"><i data-ic="minus"></i></button></div><button class="square-control" id="fit" aria-label="适应当前区域" title="适应当前区域"><i data-ic="fit"></i></button></div>
+    <div class="map-legend"><span class="legend-title">图例</span><span><b class="dot five"></b>5A 景区</span><span><b class="dot four"></b>4A 景区</span><span class="cluster-legend"><b class="mini-cluster"></b>景区聚合</span></div>
+    <div class="map-scale" aria-hidden="true"><span id="scale-text"></span><b></b></div>
+  </section>
+  <section id="foot-page" hidden></section>
+</main>
+<dialog id="modal"><div id="modal-body"></div></dialog>
+<div id="toast" role="status" aria-live="polite"></div>
+<script src="icons.js"></script><script src="map.js"></script><script src="records.js"></script><script src="record-store.js"></script><script src="github-sync.js"></script><script src="backup.js"></script><script src="app.js"></script>
+</body></html>

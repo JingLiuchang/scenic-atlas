@@ -1,0 +1,384 @@
+[
+  {
+    "key": "jiuzhaigou",
+    "name": "九寨沟风景名胜区",
+    "match": [
+      "九寨沟旅游景区",
+      "九寨沟景区",
+      "九寨沟风景名胜区"
+    ],
+    "province": "四川省",
+    "city": "阿坝藏族羌族自治州",
+    "level": 5,
+    "type": "自然",
+    "intro": "沿着日则沟的栈道走到五花海，清澈的水面下能看见纵横的沉木。秋日彩林倒映在蓝绿色湖面，顺着沟谷还可以走近层层跌落的瀑布。",
+    "tags": [
+      "高山湖泊",
+      "钙华瀑布",
+      "秋季彩林"
+    ],
+    "transit": "从黄龙九寨站或松潘站换乘景区直通车至九寨沟沟口。入园后可乘观光车，在五花海、诺日朗等站点下车步行。",
+    "url": "https://www.jiuzhai.com/intelligent-service/arrival-mode",
+    "ratingSource": "https://zwfw.mct.gov.cn/wycx/5ajlyjq/",
+    "photo": "jiuzhaigou.jpg",
+    "alt": "九寨沟五花海的秋林与湖底沉木",
+    "author": "Chensiyuan",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "photoUrl": "https://commons.wikimedia.org/wiki/File:1_jiuzhaigou_valley_wu_hua_hai_2011b.jpg",
+    "photoTitle": "1 jiuzhaigou valley wu hua hai 2011b.jpg",
+    "photoChanges": "图片已缩放以适应版面",
+    "gallery": [
+      {
+        "photo": "jiuzhaigou.jpg",
+        "alt": "九寨沟五花海的秋林与湖底沉木",
+        "author": "Chensiyuan",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "photoUrl": "https://commons.wikimedia.org/wiki/File:1_jiuzhaigou_valley_wu_hua_hai_2011b.jpg",
+        "photoTitle": "1 jiuzhaigou valley wu hua hai 2011b.jpg",
+        "photoChanges": "图片已缩放以适应版面"
+      },
+      {
+        "photo": "jiuzhaigou-pool.jpg",
+        "alt": "九寨沟则查洼沟的五彩池",
+        "author": "chensiyuan",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "photoUrl": "https://commons.wikimedia.org/wiki/File:1_jiuzhaigou_valley_five_colour_pond_2011.JPG",
+        "photoTitle": "1 jiuzhaigou valley five colour pond 2011.JPG",
+        "photoChanges": "图片已缩放以适应版面"
+      },
+      {
+        "photo": "jiuzhaigou-falls.jpg",
+        "alt": "九寨沟树正沟卧龙海一带的跌水",
+        "author": "chensiyuan",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "photoUrl": "https://commons.wikimedia.org/wiki/File:1_jiuzhaigou_valley_2011.jpg",
+        "photoTitle": "1 jiuzhaigou valley 2011.jpg",
+        "photoChanges": "图片已缩放以适应版面"
+      }
+    ]
+  },
+  {
+    "key": "huangshan",
+    "name": "黄山风景区",
+    "match": [
+      "黄山风景区",
+      "黄山风景名胜区"
+    ],
+    "province": "安徽省",
+    "city": "黄山市",
+    "level": 5,
+    "type": "自然",
+    "intro": "花岗岩峰丛间，黄山松扎根在岩石缝隙里。云雾升降时，山谷里的孤峰时隐时现。玉屏和北海一带的步道串起不同角度的山景。",
+    "tags": [
+      "花岗岩峰林",
+      "黄山松",
+      "山间云海"
+    ],
+    "transit": "从黄山北站乘客运班车至黄山风景区南大门，在汤口换乘景区交通车，按所选线路前往云谷寺或慈光阁。",
+    "url": "https://www.huangshan.com.cn/detail/ticket?id=7019&m_id=730&page=1",
+    "ratingSource": "https://zwfw.mct.gov.cn/wycx/5ajlyjq/",
+    "photo": "huangshan.jpg",
+    "alt": "黄山峰顶望向云海",
+    "author": "JesseW900",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "photoUrl": "https://commons.wikimedia.org/wiki/File:Sea_of_clouds_viewed_from_the_top_of_Huangshan.jpg",
+    "photoTitle": "Sea of clouds viewed from the top of Huangshan.jpg",
+    "photoChanges": "图片已缩放以适应版面"
+  },
+  {
+    "key": "gugong",
+    "name": "故宫博物院",
+    "match": [
+      "故宫博物院"
+    ],
+    "province": "北京市",
+    "city": "北京市",
+    "level": 5,
+    "type": "人文",
+    "intro": "从午门进入，沿中轴线依次穿过宫门、广场和殿宇，可以读出明清宫城从朝会到起居的空间秩序。转入东西两侧院落，还能看到宫廷收藏与工艺专题展。",
+    "tags": [
+      "明清宫殿",
+      "北京中轴线",
+      "宫廷文物"
+    ],
+    "transit": "从北京市区前往午门。仅预约故宫的观众，可从南池子或南长街一侧沿筒子河步行至午门，参观结束可从神武门或东华门离开。",
+    "url": "https://www.dpm.org.cn/Visit.html",
+    "ratingSource": "https://zwfw.mct.gov.cn/wycx/5ajlyjq/",
+    "photo": "gugong.jpg",
+    "alt": "北京故宫的太和门与铜狮",
+    "author": "xiquinhosilva",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "photoUrl": "https://commons.wikimedia.org/wiki/File:Gate_of_Supreme_Harmony_at_the_Forbidden_City.jpg",
+    "photoTitle": "Gate of Supreme Harmony at the Forbidden City.jpg",
+    "photoChanges": "图片已缩放以适应版面"
+  },
+  {
+    "key": "xihu",
+    "name": "杭州西湖风景名胜区",
+    "match": [
+      "西湖风景名胜区",
+      "西湖风景区"
+    ],
+    "province": "浙江省",
+    "city": "杭州市",
+    "level": 5,
+    "type": "人文",
+    "intro": "苏堤与白堤把开阔的湖面划成不同水域。一边是城市街巷，一边是山寺与园林，沿湖步行或乘船，视线会在远山、塔影和桥洞之间转换。",
+    "tags": [
+      "湖堤漫步",
+      "江南园林",
+      "湖山借景"
+    ],
+    "transit": "从杭州市区可乘地铁至湖滨一带步行到湖边。前往西岸、南岸时，可在凤起路或吴山广场等地铁站换乘景区公交。",
+    "url": "https://zfgb.hangzhou.gov.cn/11/105220253/t117220253054/518894.shtml",
+    "ratingSource": "https://zwfw.mct.gov.cn/wycx/5ajlyjq/",
+    "photo": "xihu.jpg",
+    "alt": "西湖上的雷峰夕照",
+    "author": "Yinweichen",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "photoUrl": "https://commons.wikimedia.org/wiki/File:Sunset_with_Leifeng_Pagoda_on_West_Lake.jpg",
+    "photoTitle": "Sunset with Leifeng Pagoda on West Lake.jpg",
+    "photoChanges": "图片已缩放以适应版面"
+  },
+  {
+    "key": "wulingyuan",
+    "name": "张家界武陵源风景名胜区",
+    "match": [
+      "武陵源",
+      "张家界国家森林公园"
+    ],
+    "province": "湖南省",
+    "city": "张家界市",
+    "level": 5,
+    "type": "自然",
+    "intro": "砂岩峰柱密布在沟谷之间。沿金鞭溪可以从谷底仰看高峰，换到袁家界和天子山的观景台，又能看见峰柱从林海间成片升起。",
+    "tags": [
+      "砂岩峰林",
+      "峡谷溪流",
+      "高处观景"
+    ],
+    "transit": "核心景区有多个入口，搭车或自驾时按预订门票选择武陵源标志门（东门）或森林公园门票站（南门）等目的地，入园后可换乘环保车。",
+    "url": "https://whhlyt.hunan.gov.cn/whhlyt/wldh2022jt/202208/t20220823_27716245.html",
+    "ratingSource": "https://zwfw.mct.gov.cn/wycx/5ajlyjq/",
+    "photo": "wulingyuan.jpg",
+    "alt": "武陵源山谷中的砂岩峰柱",
+    "author": "Scott Edmunds",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "photoUrl": "https://commons.wikimedia.org/wiki/File:The_sandstone_pillars_of_Wulingyuan_%2853963199701%29.jpg",
+    "photoTitle": "The sandstone pillars of Wulingyuan (53963199701).jpg",
+    "photoChanges": "图片已缩放以适应版面"
+  },
+  {
+    "key": "lijiver",
+    "name": "桂林漓江景区",
+    "match": [
+      "漓江景区",
+      "漓江风景名胜区"
+    ],
+    "province": "广西壮族自治区",
+    "city": "桂林市",
+    "level": 5,
+    "type": "自然",
+    "intro": "沿江从桂林向阳朔行进，喀斯特峰丛、村落和江滩轮流映入水中。兴坪附近江道转弯，登岸沿河慢走，也能从岸边欣赏山峰的轮廓。",
+    "tags": [
+      "喀斯特峰丛",
+      "山水倒影",
+      "江上游览"
+    ],
+    "transit": "游船依船票从竹江或磨盘山码头出发，桂林市区有定制客运到码头。游兴坪段可以从阳朔站换乘接驳车前往兴坪码头。",
+    "url": "https://www.liriver.org.cn/page/article/lyfw.jtcx",
+    "ratingSource": "https://zwfw.mct.gov.cn/wycx/5ajlyjq/",
+    "photo": "lijiver.jpg",
+    "alt": "兴坪附近的漓江与喀斯特峰林",
+    "author": "ChinaTravelSavvy.Com - China Travel Guide",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "photoUrl": "https://commons.wikimedia.org/wiki/File:Li_River_at_Xingping_1.jpg",
+    "photoTitle": "Li River at Xingping 1.jpg",
+    "photoChanges": "图片已缩放以适应版面"
+  },
+  {
+    "key": "badaling",
+    "name": "八达岭长城",
+    "match": [
+      "八达岭长城",
+      "八达岭－慕田峪",
+      "八达岭—慕田峪",
+      "八达岭-慕田峪"
+    ],
+    "province": "北京市",
+    "city": "北京市",
+    "level": 5,
+    "type": "人文",
+    "intro": "长城沿延庆的山脊起伏，关城两侧分出南线和北线。砖砌城墙顺应山势转折，登上敌楼，可以沿着山脊辨认绵延的防御工事。",
+    "tags": [
+      "明代长城",
+      "山脊步道",
+      "敌楼关城"
+    ],
+    "transit": "从北京清河站等车站搭乘停靠八达岭长城站的高铁，出站后沿景区标识步行至关城登城口。",
+    "url": "https://www.visitbeijing.com.cn/article/4CWpVxOwpqX",
+    "ratingSource": "https://zwfw.mct.gov.cn/wycx/5ajlyjq/",
+    "photo": "badaling.jpg",
+    "alt": "八达岭一带长城上的敌楼",
+    "author": "Herbert wie",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "photoUrl": "https://commons.wikimedia.org/wiki/File:Wachturm_Chinesische_Mauer.jpg",
+    "photoTitle": "Wachturm Chinesische Mauer.jpg",
+    "photoChanges": "图片已缩放以适应版面"
+  },
+  {
+    "key": "terracotta",
+    "name": "秦始皇帝陵博物院",
+    "match": [
+      "秦始皇帝陵",
+      "秦始皇兵马俑",
+      "秦兵马俑"
+    ],
+    "province": "陕西省",
+    "city": "西安市",
+    "level": 5,
+    "type": "人文",
+    "intro": "从俑坑上方俯看，步兵、战车与战马组成分列的军阵。环绕展厅行走，能从不同角度观察陶俑的发式、铠甲和姿态，再到丽山园了解陵园布局。",
+    "tags": [
+      "秦代陶俑",
+      "考古遗址",
+      "古代军阵"
+    ],
+    "transit": "从西安市区乘地铁至华清池站，换乘临潼方向前往兵马俑的公交，抵达后步行入馆。兵马俑与丽山园之间有接驳车。",
+    "url": "https://www.bmy.com.cn/guide/368.html",
+    "ratingSource": "https://zwfw.mct.gov.cn/wycx/5ajlyjq/",
+    "photo": "terracotta.jpg",
+    "alt": "西安兵马俑一号坑中的陶俑军阵",
+    "author": "Maros M r a z ( Maros )",
+    "license": "CC BY-SA 2.5",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+    "photoUrl": "https://commons.wikimedia.org/wiki/File:Terracotta_Army_Pit_1_1.jpg",
+    "photoTitle": "Terracotta Army Pit 1 1.jpg",
+    "photoChanges": "图片已缩放以适应版面"
+  },
+  {
+    "key": "yuyuan",
+    "name": "上海豫园",
+    "match": [
+      "上海豫园",
+      "豫园"
+    ],
+    "province": "上海市",
+    "city": "上海市",
+    "level": 4,
+    "type": "人文",
+    "intro": "园子藏在上海老城厢里。沿曲廊绕过假山和水池，望向对岸的亭台，窗洞与廊柱把园景分成一幅幅小景。",
+    "tags": [
+      "江南园林",
+      "假山叠石",
+      "池边曲廊"
+    ],
+    "transit": "搭乘上海地铁至豫园站，步行穿过老城厢。可导航至福佑路的豫园北门，按现场指引入园。",
+    "url": "https://www.yugarden.com.cn/page/articleView/message.html",
+    "ratingSource": "https://whlyj.sh.gov.cn/4ajjq/20191008/0022-28627.html",
+    "photo": "yuyuan.jpg",
+    "alt": "上海豫园内的积玉池与听涛阁",
+    "author": "Jpbowen",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "photoUrl": "https://commons.wikimedia.org/wiki/File:View_in_Yu_Garden%2C_Shanghai.JPG",
+    "photoTitle": "View in Yu Garden, Shanghai.JPG",
+    "photoChanges": "图片已缩放以适应版面"
+  },
+  {
+    "key": "wuhou",
+    "name": "成都武侯祠博物馆",
+    "match": [
+      "成都武侯祠",
+      "武侯祠博物馆"
+    ],
+    "province": "四川省",
+    "city": "成都市",
+    "level": 4,
+    "type": "人文",
+    "intro": "汉昭烈庙、武侯祠和惠陵相邻，串起蜀汉君臣的历史。殿堂间可以看碑刻、楹联与塑像，走出院落便是夹着红墙的竹径。",
+    "tags": [
+      "蜀汉历史",
+      "祠庙碑刻",
+      "红墙竹径"
+    ],
+    "transit": "从成都市区乘地铁至高升桥站，再步行前往武侯祠大街的博物馆入口。",
+    "url": "https://www.wuhouci.net.cn/jtzy",
+    "ratingSource": "https://www.sc.gov.cn/10462/c108551/2022/1/28/9218d92748e14e4c89cdfaf5bde384d2/files/%E5%9B%9B%E5%B7%9D%E7%9C%81%E5%85%BB%E6%AE%96%E6%B0%B4%E5%9F%9F%E6%BB%A9%E6%B6%82%E8%A7%84%E5%88%92%EF%BC%882019-2030%E5%B9%B4%EF%BC%89-20250218155356828.pdf",
+    "photo": "wuhou.jpg",
+    "alt": "成都武侯祠内景",
+    "author": "Daderot",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "photoUrl": "https://commons.wikimedia.org/wiki/File:Wuhou_Shrine_-_Chengdu%2C_China_-_DSC05499.jpg",
+    "photoTitle": "Wuhou Shrine - Chengdu, China - DSC05499.jpg",
+    "photoChanges": "图片已缩放以适应版面"
+  },
+  {
+    "key": "potala",
+    "name": "布达拉宫景区",
+    "match": [
+      "布达拉宫"
+    ],
+    "province": "西藏自治区",
+    "city": "拉萨市",
+    "level": 5,
+    "type": "人文",
+    "intro": "红宫与白宫沿红山层层叠起，是拉萨河谷里醒目的轮廓。广场适合远望整座宫殿，沿参观路线登上石阶，能近看红白墙体与藏式梁柱。",
+    "tags": [
+      "藏式宫堡",
+      "红宫白宫",
+      "高原城景"
+    ],
+    "transit": "从拉萨市区乘公交或打车至布达拉宫广场周边，步行至安检口，再按预约时段和路线进入。",
+    "url": "https://wlt.xizang.gov.cn/xccx/lytg/202601/t20260123_520569.html",
+    "ratingSource": "https://zwfw.mct.gov.cn/wycx/5ajlyjq/",
+    "photo": "potala.jpg",
+    "alt": "暮色中的拉萨布达拉宫",
+    "author": "cattan2011",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "photoUrl": "https://commons.wikimedia.org/wiki/File:Potala_Palace_-_Lhasa%2C_Tibet.jpg",
+    "photoTitle": "Potala Palace - Lhasa, Tibet.jpg",
+    "photoChanges": "图片已缩放以适应版面"
+  },
+  {
+    "key": "lijiang",
+    "name": "丽江古城景区",
+    "match": [
+      "丽江古城",
+      "丽江大研古城"
+    ],
+    "province": "云南省",
+    "city": "丽江市",
+    "level": 5,
+    "type": "人文",
+    "intro": "大研古城的街道沿水渠铺开，小石桥把纳西民居和院落连在一起。从四方街走入狮子山一带的巷子，可以看见层层灰瓦顺山势延伸。",
+    "tags": [
+      "纳西民居",
+      "水巷石桥",
+      "古城街市"
+    ],
+    "transit": "从丽江站搭乘前往古城的公交或打车至大水车、南门等古城外围入口，再沿石板街步行游览。",
+    "url": "https://www.lijiang.cn/article/119637.html",
+    "ratingSource": "https://zwfw.mct.gov.cn/wycx/5ajlyjq/",
+    "photo": "lijiang.jpg",
+    "alt": "丽江古城的连片瓦屋",
+    "author": "Romain Pontida",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "photoUrl": "https://commons.wikimedia.org/wiki/File:Old_town%27s_roofs%2C_Lijiang%2C_Yunnan%2C_China.jpg",
+    "photoTitle": "Old town's roofs, Lijiang, Yunnan, China.jpg",
+    "photoChanges": "图片已缩放以适应版面"
+  }
+]

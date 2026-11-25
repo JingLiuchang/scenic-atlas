@@ -101,3 +101,36 @@ test('malformed remote JSON remains untouched',async()=>{
  await api.identify();const sync=new AtlasSync(memory(delta('hill','want',true,3)),()=>{});
  sync.api=api;await sync.sync();assert.equal(writes,0);assert.match(sync.message,/无法解析/);sync.disconnect();
 });
+test('a remembered credential checks the pinned private repo before reading and syncing',async(t)=>{
+  const saved={owner:'alice',repo:'atlas',repoId:21,version:'device-1',token:'github_pat_test'};
+  const requests=[];
+  let repoId=21;
+  t.mock.method(globalThis,'fetch',async(url,options)=>{
+    requests.push(new URL(url).pathname);
+    assert.equal(options.headers.Authorization,'Bearer '+saved.token);
+    if(url.includes('/contents/'))return Response.json({},{status:404});
+    return Response.json({id:repoId,private:true,default_branch:'main',owner:{login:'alice'}});
+  });
+  const sync=new AtlasSync(memory(records.empty()),()=>{});
+  await sync.resume(saved);
+  assert.match(sync.message,/已同步/);
+  assert.deepEqual(requests,['/repos/alice/atlas','/repos/alice/atlas/contents/atlas-records.json']);
+  repoId=22;requests.length=0;
+  await sync.resume(saved);
+  assert.match(sync.message,/身份发生变化/);
+  assert.deepEqual(requests,['/repos/alice/atlas']);
+  sync.disconnect();
+});
+test('a remembered credential survives network loss and only its version is forgotten on 401',async(t)=>{
+  let expired=false;
+  t.mock.method(globalThis,'fetch',async()=>{
+    if(expired)return Response.json({},{status:401});
+    throw new TypeError('offline');
+  });
+  const invalidated=[];
+  const sync=new AtlasSync(memory(records.empty()),()=>{},version=>invalidated.push(version));
+  await sync.resume({owner:'a',repo:'atlas',repoId:21,version:'device-2',token:'github_pat_test'});
+  assert.ok(sync.timer);assert.deepEqual(invalidated,[]);
+  expired=true;await sync.sync();
+  assert.equal(sync.api,null);assert.deepEqual(invalidated,['device-2']);assert.match(sync.message,/已过期/);
+});

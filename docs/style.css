@@ -21,3 +21,4 @@
 .foot-tools .smallnote{margin:0}.foot-tools+.foot-tabs{margin-top:14px}
 .sync-status{color:var(--green);font-size:13px;line-height:1.65;overflow-wrap:anywhere;margin-top:12px}
 #cloud-connect .form-field{font-size:14px}#cloud-connect .linkbtn{font-size:13px}
+.remember-token{display:flex;align-items:center;gap:.5rem;min-height:2.5rem;color:var(--ink);font-size:15px;cursor:pointer}.remember-token input{width:18px;height:18px;accent-color:var(--green)}

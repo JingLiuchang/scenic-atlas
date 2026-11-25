@@ -28,9 +28,12 @@ class AtlasGitHub {
     }
     return response.json();
   }
+  selectOwner(owner) {
+    this.owner=owner;
+    this.base='/repos/'+encodeURIComponent(owner)+'/'+encodeURIComponent(this.repo);
+  }
   async identify() {
-    const user=await this.request('/user');this.owner=user.login;
-    this.base='/repos/'+encodeURIComponent(this.owner)+'/'+encodeURIComponent(this.repo);
+    const user=await this.request('/user');this.selectOwner(user.login);
     return this.checkRepo();
   }
   async checkRepo() {
@@ -63,7 +66,8 @@ class AtlasGitHub {
   close(){this.controller.abort();this.token=''}
 }
 class AtlasSync {
-  constructor(store,notify) {
+  constructor(store,notify,onInvalid=()=>{}) {
+    this.onInvalid=onInvalid;
     this.store=store;this.notify=notify;this.api=null;this.running=null;this.timer=null;this.retry=0;
     this.message='仅保存在此设备';this.again=false;this.generation=0;
   }
@@ -73,9 +77,19 @@ class AtlasSync {
     const generation=this.generation,api=new AtlasGitHub(token,repo);this.connecting=api;
     try {
       const meta=await api.identify();if(generation!==this.generation)return;
-      await accept(meta);if(generation!==this.generation)return;
+      await accept(meta,api);if(generation!==this.generation)return;
       this.api=api;this.connecting=null;await this.sync();
     }catch(err){if(generation===this.generation){this.connecting=null;api.close();this.api=null;this.status(err.message)}throw err}
+  }
+  resume(saved) {
+    if(!Number.isSafeInteger(saved.repoId)||saved.repoId<=0||!saved.owner||!saved.version)throw new Error('保存的仓库信息不完整。');
+    this.disconnect(false);
+    const api=new AtlasGitHub(saved.token,saved.repo);
+    api.selectOwner(saved.owner);
+    api.repoId=saved.repoId;
+    api.savedVersion=saved.version;
+    this.api=api;
+    return this.sync();
   }
   disconnect(show=true){
     this.generation++;this.api?.close();this.connecting?.close();this.connecting=null;this.api=null;
@@ -114,7 +128,11 @@ class AtlasSync {
         if(!active())return;
         const transient=e.retryable||[409,429,500,502,503,504].includes(e.status);
         if(transient){this.retry=Math.min(6,this.retry+1);this.status('连接暂不可用，更改已留在本机，将自动重试。')}
-        else {this.retry=0;this.status(e.message);if(e.status===401){this.disconnect(false);this.status(e.message)}}
+        else {
+          this.retry=0;
+          if(e.status===401){this.disconnect(false);this.onInvalid(api.savedVersion)}
+          this.status(e.message);
+        }
       }finally{
         if(active()){
           this.running=null;

@@ -1,16 +1,25 @@
 class AtlasGitHub {
-  constructor(token, repo, send=fetch) {
+  constructor(token, repo, send=globalThis.fetch.bind(globalThis)) {
     if(!/^[a-z0-9][a-z0-9._-]{0,99}$/i.test(repo))throw new Error('请输入仓库名称，例如 scenic-atlas-data。');
-    if(!token.startsWith('github_pat_'))throw new Error('请使用仅授权给私人数据仓库的细粒度令牌。');
+    if(!/^github_pat_[A-Za-z0-9_]+$/.test(token))throw new Error('请粘贴完整的 GitHub 细粒度令牌，含开头的 github_pat_。');
     this.token=token;this.repo=repo;this.send=send;this.controller=new AbortController();
   }
   async request(path,options={}) {
-    const response=await this.send('https://api.github.com'+path,{
+    const init={
       method:options.method||'GET',body:options.body?JSON.stringify(options.body):undefined,
       headers:{Accept:'application/vnd.github+json',Authorization:'Bearer '+this.token,
         'X-GitHub-Api-Version':'2022-11-28',...(options.body?{'Content-Type':'application/json'}:{})},
       credentials:'omit',redirect:'error',cache:'no-store',referrerPolicy:'no-referrer',signal:this.controller.signal
-    });
+    };
+    let response;
+    try {
+      response=await this.send('https://api.github.com'+path,init);
+    } catch(error) {
+      if(!(error instanceof TypeError))throw error;
+      const failure=new Error('浏览器未能取得 api.github.com 的响应，请检查网络或浏览器的访问限制后重试。');
+      failure.retryable=true;
+      throw failure;
+    }
     if(response.status===404 && options.missing)return null;
     if(!response.ok){
       const messages={401:'令牌无效或已过期，请重新连接。',403:'GitHub 拒绝此次操作，请检查仓库内容权限、令牌有效期和 API 配额。',404:'找不到数据仓库，请确认已创建私有仓库并将它授权给令牌。',409:'另一台设备刚刚提交了更改。',422:'GitHub 无法写入文件，请检查默认分支及其写入规则。',429:'请求频率过高，稍后将重试。'};
@@ -103,7 +112,7 @@ class AtlasSync {
         }
       }catch(e){
         if(!active())return;
-        const transient=!e.status&&e.name==='TypeError'||[409,429,500,502,503,504].includes(e.status);
+        const transient=e.retryable||[409,429,500,502,503,504].includes(e.status);
         if(transient){this.retry=Math.min(6,this.retry+1);this.status('连接暂不可用，更改已留在本机，将自动重试。')}
         else {this.retry=0;this.status(e.message);if(e.status===401){this.disconnect(false);this.status(e.message)}}
       }finally{

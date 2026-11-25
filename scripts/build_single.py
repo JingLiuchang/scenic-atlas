@@ -40,7 +40,7 @@ window.ATLAS_READY=(async()=>{
             source = source.replace("init().catch(err=>", "window.ATLAS_READY.then(init).catch(err=>")
         return "<script>" + source.replace("</script", "<\\/script") + "</script>"
 
-    page = re.sub(r'<script src="([a-z-]+\.js)"></script>', inline, page)
+    page = re.sub(r'<script src="([a-z-]+\.js)(?:\?v=\d+)?"></script>', inline, page)
     args.output.write_text(page, encoding="utf-8")
 
 

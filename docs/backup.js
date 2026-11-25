@@ -59,7 +59,7 @@ async function connectData(event){
       try{localStorage.setItem(recordStore.scope+':connection',JSON.stringify({id:meta.id,name:meta.name,fullName:meta.full_name}))}catch{}
     });
     if(form.isConnected&&$('#modal').open)dataDialog();
-  }catch(e){cloudSync.status(e.name==='TypeError'?'无法连接 GitHub，请检查网络后再试。':e.message)}
+  }catch(e){cloudSync.status(e.message)}
   finally{submit.disabled=false}
 }
 async function exportBackup(){

@@ -10,6 +10,18 @@ function delta(id,field,value,t,by='a'){
 }
 const home={name:'杭州',lng:120.1,lat:30.2,crs:'GCJ-02'};
 function memory(initial){return {state:initial,async include(doc){this.state=records.merge(this.state,doc);return this.state}}}
+test('default transport calls fetch with the browser global and surfaces GitHub HTTP errors',async(t)=>{
+  let received=0;
+  t.mock.method(globalThis,'fetch',async function(url){
+    assert.equal(this,globalThis,'native browser fetch requires its global receiver');
+    assert.equal(url,'https://api.github.com/user');
+    received++;
+    return Response.json({message:'Bad credentials'},{status:401});
+  });
+  const api=new AtlasGitHub('github_pat_test','atlas');
+  await assert.rejects(api.identify(),{status:401,message:/令牌无效/});
+  assert.equal(received,1);
+});
 test('independent flags, cancellations, and home deletion survive merge in both directions',()=>{
  const a=records.merge(delta('hill','visited',true,10),delta('lake','want',true,10),delta(null,'home',home,12));
  const b=records.merge(delta('hill','want',true,9),delta('lake','want',false,15),delta(null,'home',null,13));
@@ -74,7 +86,8 @@ test('UTF-8 file roundtrip, pinned repository and branch, correct file SHA',asyn
 });
 test('offline failures keep the local mutation and schedule a retry',async()=>{
  const store=memory(delta('hill','visited',true,4)),sync=new AtlasSync(store,()=>{});
- sync.api={checkRepo(){throw new TypeError('offline')},close(){}};
+ sync.api=new AtlasGitHub('github_pat_test','atlas',async()=>{throw new TypeError('Failed to fetch')});
+ await assert.rejects(sync.api.identify(),{message:/api\.github\.com/,retryable:true});
  await sync.sync();assert.equal(store.state.spots.hill.visited.value,true);assert.ok(sync.retry);assert.ok(sync.timer);sync.disconnect();
 });
 test('malformed remote JSON remains untouched',async()=>{
